@@ -11,8 +11,8 @@ async function checkData() {
   const londonShops = await prisma.repairShop.findMany({
     where: {
       OR: [
-        { city: { contains: 'London', mode: 'insensitive' } },
-        { city: { contains: 'london', mode: 'insensitive' } },
+        { city: { contains: 'London' } },
+        { city: { contains: 'london' } },
       ]
     },
     take: 5
